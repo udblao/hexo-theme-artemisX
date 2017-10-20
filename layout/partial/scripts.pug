@@ -22,13 +22,14 @@ if theme.google_analytics
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
+        console.log('Google Analytics')
 
 //- Google AdSense
 if theme.google_adsense
+    script(sync src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
     script.
-        script(sync src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
         (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "",
+            google_ad_client: "#{theme.google_adsense}",
             enable_page_level_ads: true
         });
         console.log('Google AdSense')
