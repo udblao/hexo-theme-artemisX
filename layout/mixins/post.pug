@@ -21,7 +21,15 @@ mixin posts()
                     h2.post-title
                         a.post-title-link(href=url_for(item.path))
                             +postTitle(item.title)
-                    +postInfo(item)
+                    p.post-info
+                        != full_date(item.date, config.date_format)
+                        if item.categories && item.categories.length
+                            - item.categories.each(function (category) {
+                                a.post-category-link(href=url_for(category.path))
+                                    | &nbsp;·
+                                    != category.name
+                                    | &nbsp;·
+                            - })
                     .post-content
                         != item.excerpt
                     a.read-more(href=url_for(item.path))

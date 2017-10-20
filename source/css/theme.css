@@ -420,6 +420,10 @@ a.post-title-link:hover:before {
   -o-transform: scaleX(1);
   transform: scaleX(1); }
 
+a.post-category-link {
+  color: #7f8c8d;
+  margin: 1.2em 0; }
+
 hr {
   border: 0; }
 
