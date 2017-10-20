@@ -1,0 +1,28 @@
+name: ArtemisX
+url: https://github.com/Dreyer/hexo-theme-artemis
+
+menu:
+  Home: /
+  Archives: /archives
+  GitHub: https://github.com/wwwuxt
+  RSS: /atom.xml
+
+favicon: /favicon.ico
+logo: /favicon.ico
+
+# Comment
+# e.g disqus: seansun
+disqus:
+
+# Analytics
+mathjax: false
+google_analytics: UA-108353521-1
+google_adsense:
+baidu_autopush: true
+
+
+# Copyright Infomation
+copyright:
+  since: 2017
+  name: wwwuxt
+  url: http://wwwuxt.cc
