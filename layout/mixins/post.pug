@@ -60,6 +60,14 @@ mixin post(item)
         article.post-block
             h1.post-title
                 +postTitle(item.title)
-            +postInfo(item)
+            p.post-info
+                != full_date(item.date, config.date_format)
+                if item.categories && item.categories.length
+                    - item.categories.each(function (category) {
+                        a.post-category-link(href=url_for(category.path))
+                            | &nbsp;·
+                            != category.name
+                            | &nbsp;·
+                    - })
             .post-content
                 != item.content
