@@ -13,9 +13,10 @@ git clone https://github.com/wwwuxt/hexo-theme-artemisX themes/artemisX
 ## config
 override your parameter in `_config.yml`.
 ## update
+```
 cd themes/artemisX
 git pull
-
+```
 # ArtemisX's new development
 
 ## new feature
