@@ -1,70 +1,34 @@
-# Artemis
+# ArtemisX | [Preview](http://wwwuxt.cc) |
 
-A minimalist theme for [Hexo](http://hexo.io/) based on the [Apollo](https://github.com/pinggod/hexo-theme-apollo) theme.
+- Custom development based on [Artemis](https://github.com/Dreyer/hexo-theme-artemis)
+- html render [jade](https://jade-lang.com)
+- css render [sass](https://www.sass.hk/)
 
-The original Apollo theme didn't appear to work with the latest version of Hexo renderer libraries since [Jade](https://jade-lang.com) is now [Pug](https://pugjs.org).
 
-[Preview](http://hexo-theme-artemis.smplcty.com/) |  [Screenshot](https://i.imgur.com/PCVquML.png)
-
-## Installation
-
-### Install
-
+# Installation
+## install
 ```
-npm install --save hexo-renderer-pug hexo-generator-feed hexo-generator-sitemap
-git clone https://github.com/Dreyer/hexo-theme-artemis.git themes/artemis
+git clone https://github.com/wwwuxt/hexo-theme-artemisX themes/artemisX
 ```
-
-### Enable
-
-Modify `theme` setting in `_config.yml` to `artemis`.
-
-You can override the theme options using `theme_config` in the main `_config.yml`:
-
-```yaml
-theme: artemis
-theme_config:
-  logo:
-  google_analytics: UA-12345678-9
-  copyright:
-    since: 2016
-    name: John Doe
-    url: https://www.example.org/john-doe
-  menu:
-    Home: /
-    About: /about
-    GitHub: https://github.com/Dreyer
-    RSS: /atom.xml
-```
-
-### Update
-
-```
-cd themes/artemis
+## config
+override your parameter in `_config.yml`.
+## update
+cd themes/artemisX
 git pull
-```
 
-## Requirements
+# ArtemisX's new development
 
-Test with the latest versions of the following:
+## new feature
 
-| Library | Min. Version |
-| --- | --- |
-| [Hexo](https://hexo.io/) | 3.3.x |
-| [Grunt](https://gruntjs.com/) | 1.0.x |
-| [Sass](http://sass-lang.com/) | 3.4.x |
-| [Pug](https://pugjs.org) | 2.0.x |
+- `google_adsense`
+- `baidu_autopush`
+- `categories`
+- ......
 
-**Note:** The Pug dependency is used to render the `.pug` templates in the `layout` directory when you run `hexo generate`.
+## new style
 
-## Credits
+- `post-title-link` a hover style 
 
-This theme is largely based on the efforts of [Sean Sun](https://github.com/pinggod).
+# License
 
-According to classical Greek mythology, [Artemis](https://en.wikipedia.org/wiki/Artemis) is the twin sister of Apollo and as this theme is virtually identical to [hexo-theme-apollo](https://github.com/pinggod/hexo-theme-apollo), it seemed apt.
-
-Icons are from [IconNinja](http://www.iconninja.com/fairy-tales-icon-sets-16414).
-
-## License
-
-MIT
+[MIT](https://opensource.org/licenses/mit-license.php)
