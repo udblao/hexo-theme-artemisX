@@ -4,8 +4,9 @@ url: https://github.com/wwwuxt/hexo-theme-artemisX
 menu:
   Home: /
   Archives: /archives
-  GitHub: https://github.com/wwwuxt
-  RSS: /atom.xml
+  About: /about
+  # GitHub: https://github.com/wwwuxt
+  # RSS: /atom.xml
 
 favicon: /favicon.ico
 logo: /favicon.ico

@@ -4,10 +4,10 @@ mixin home()
     .paginator
         if page.prev
             a.prev(href=url_for(prev))
-                != __('prev')
+                != __('< PREV')
         if page.next
             a.next(href=url_for(next))
-                != __('next')
+                != __('NEXT >')
 
 mixin post()
     - var prev = page.prev ? page.prev.path : false;
@@ -15,7 +15,7 @@ mixin post()
     .paginator
         if prev
             a.prev(href=url_for(prev))
-                != __('prev_post')
+                != __('< PREV_POST')
         if next
             a.next(href=url_for(next))
-                != __('next_post')
+                != __('NEXT_POST >')
