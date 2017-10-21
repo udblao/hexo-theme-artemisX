@@ -366,8 +366,9 @@ body {
   color: #34495e;
   font-size: 15px;
   line-height: 1.6;
-  background-color: #fff;
-  font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif; }
+  background-color: #F6F6F6;
+  border-top: 1px solid #065b28;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif; }
 
 ul.nav,
 ul.post-list {
@@ -463,6 +464,18 @@ table {
   table tbody td :last-child {
     margin-bottom: 0; }
 
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+/* For IE 6/7 only */
+.clearfix {
+  *zoom: 1; }
+
 header {
   min-height: 60px; }
   header .logo-link {
@@ -495,6 +508,7 @@ header {
   .home.post-list .post-content > ul {
     list-style: initial; }
   .home.post-list .read-more {
+    font-size: 1.3em;
     color: #42b983; }
 
 .archive {
@@ -781,8 +795,9 @@ pre {
 .paginator {
   margin: 4em 0;
   text-align: center; }
-  .paginator .prev, .paginator .next {
+  .paginator .prev {
     display: inline-block;
+    float: left;
     margin: 0 4px;
     padding: 4px 12px;
     border-radius: 4px;
@@ -790,7 +805,19 @@ pre {
     font-size: 14px;
     color: #fff;
     background-color: #4fc08d; }
-    .paginator .prev:hover, .paginator .next:hover {
+    .paginator .prev:hover {
+      background-color: #22bd77; }
+  .paginator .next {
+    display: inline-block;
+    float: right;
+    margin: 0 4px;
+    padding: 4px 12px;
+    border-radius: 4px;
+    border-bottom: 4px solid #3aa373;
+    font-size: 14px;
+    color: #fff;
+    background-color: #4fc08d; }
+    .paginator .next:hover {
       background-color: #22bd77; }
 
 .ds-thread,
@@ -802,24 +829,24 @@ main.container {
 
 @media screen and (min-width: 700px) {
   .wrap {
-    width: 700px;
+    width: 800px;
     margin: 0 auto; }
 
   header {
-    padding: 20px 0; } }
+    padding: 10px 20px; } }
 @media screen and (max-width: 700px) {
   .wrap {
     width: 100%; }
 
   header {
-    padding: 20px 0; }
+    padding: 10px 20px; }
     header a.logo-link,
     header ul.nav.nav-list {
       float: none;
       display: block;
       text-align: center; }
     header li.nav-list-item {
-      padding: 10px 10px; }
+      padding: 10px 20px; }
 
   main.container,
   .home.post-list,

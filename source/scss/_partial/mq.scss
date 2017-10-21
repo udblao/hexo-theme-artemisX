@@ -4,11 +4,11 @@ main.container {
 
 @media screen and (min-width: 700px) {
     .wrap {
-        width: 700px;
+        width: 800px;
         margin: 0 auto;
     }
     header {
-        padding: 20px 0;
+        padding: 10px 20px;
     }
 }
 
@@ -17,7 +17,7 @@ main.container {
         width: 100%;
     }
     header {
-        padding: 20px 0;
+        padding: 10px 20px;
         a.logo-link,
         ul.nav.nav-list {
             float: none;
@@ -25,7 +25,7 @@ main.container {
             text-align: center;
         }
         li.nav-list-item {
-            padding: 10px 10px;
+            padding: 10px 20px;
         }
     }
     main.container,

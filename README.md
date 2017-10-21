@@ -24,11 +24,17 @@ git pull
 - `google_adsense`
 - `baidu_autopush`
 - `categories`
+- `busuanzi` pv/uv counting
 - ......
 
 ## new style
 
 - `post-title-link` a hover style 
+- `post-info/post-category-link post-category-name` post categories
+- `.clearfix` add .clearfix for clear float
+- adjust page width
+- change paginator style 
+- ......
 
 # License
 

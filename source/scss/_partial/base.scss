@@ -13,8 +13,9 @@ body {
     color: #34495e;
     font-size: 15px;
     line-height: 1.6;
-    background-color: #fff;
-    font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #F6F6F6;
+    border-top: 1px solid hsl(144, 88%, 19%);
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
 
 ul.nav,
@@ -132,4 +133,17 @@ table {
             margin-bottom: 0;
         }
     }
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+/* For IE 6/7 only */
+.clearfix {
+    *zoom: 1;
 }
