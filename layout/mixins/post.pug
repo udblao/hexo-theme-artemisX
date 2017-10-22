@@ -22,13 +22,15 @@ mixin posts()
                         a.post-title-link(href=url_for(item.path))
                             +postTitle(item.title)
                     p.post-info
+                        i(class='fa fa-calendar') &nbsp;
                         != full_date(item.date, config.date_format)
+                        | &nbsp;| 
+                        i(class='fa fa-folder-o') &nbsp;
                         if item.categories && item.categories.length
                             - item.categories.each(function (category) {
                                 a.post-category-link(href=url_for(category.path))
-                                    | &nbsp;·
                                     != category.name
-                                    | &nbsp;·
+                                    | &nbsp;/&nbsp;
                             - })
                     .post-content
                         != item.excerpt
@@ -61,13 +63,15 @@ mixin post(item)
             h1.post-title
                 +postTitle(item.title)
             p.post-info
+                i(class='fa fa-calendar') &nbsp;
                 != full_date(item.date, config.date_format)
+                | &nbsp;| 
+                i(class='fa fa-folder-o') &nbsp;
                 if item.categories && item.categories.length
                     - item.categories.each(function (category) {
                         a.post-category-link(href=url_for(category.path))
-                            | &nbsp;·
                             != category.name
-                            | &nbsp;·
+                            | &nbsp;/&nbsp;
                     - })
             .post-content
                 != item.content
