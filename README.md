@@ -34,6 +34,7 @@ git pull
 - `.clearfix` add .clearfix for clear float
 - adjust page width
 - change paginator style 
+- add [Font Awesome](http://fontawesome.dashgame.com)
 - ......
 
 # License
