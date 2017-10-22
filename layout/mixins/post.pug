@@ -73,5 +73,7 @@ mixin post(item)
                             != category.name
                             | &nbsp;/&nbsp;
                     - })
+                else
+                    a.post-category-link(href=url_for(theme.copyright.url)) #{'Full Stand developer'}
             .post-content
                 != item.content
