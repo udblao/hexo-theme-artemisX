@@ -25,6 +25,9 @@ mixin posts()
                         i(class='fa fa-calendar') &nbsp;
                         != full_date(item.date, config.date_format)
                         | &nbsp;| 
+                        i(class='fa fa-tags') &nbsp;
+                        +tags(item)
+                        | &nbsp;| 
                         i(class='fa fa-folder-o') &nbsp;
                         +categories(item)
                     .post-content
@@ -61,6 +64,9 @@ mixin post(item)
                 i(class='fa fa-calendar') &nbsp;
                 != full_date(item.date, config.date_format)
                 | &nbsp;| 
+                i(class='fa fa-tags') &nbsp;
+                +tags(item)
+                | &nbsp;| 
                 i(class='fa fa-folder-o') &nbsp;
                 +categories(item)
             .post-content
@@ -69,11 +75,23 @@ mixin post(item)
 //- Tags Page
 mixin tagList()
     .tag-list
+        i(class='fa fa-tags') &nbsp;
         if site.tags && site.tags.length
-        - site.tags.each(function (tag) {
-            a(href=url_for(tag.path))=tag.name
-            br
+            - site.tags.each(function (tag) {
+                p.tag-info
+                    a(href=url_for(tag.path))=tag.name
+            - })
+
+//- Post tags
+mixin tags(item)
+    if item.tags && item.tags.length
+        - item.tags.each(function (tag) {
+            a.post-tag-link(href=url_for(tag.path))
+                != tag.name
+                | &nbsp;·&nbsp;
         - })
+    else
+        a.post-category-link(href=url_for(theme.GitHub)) #{'coder'}
 
 //- Post categories
 mixin categories(item)

@@ -2,6 +2,7 @@ extends partial/layout.pug
 
 block container
     h1.page_tag
+        i(class='fa fa-tag') &nbsp;
         != page.tag
     include mixins/post.pug
     +postList()
