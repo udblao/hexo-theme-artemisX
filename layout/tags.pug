@@ -1,0 +1,9 @@
+extends partial/layout.pug
+
+block container
+    include mixins/post.pug
+    +tags_post()
+
+
+block copyright
+    include partial/copyright.pug

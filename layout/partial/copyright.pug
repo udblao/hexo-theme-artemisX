@@ -4,18 +4,20 @@
     - var copyrightYear = ! theme.copyright.since || currentYear == theme.copyright.since ? currentYear : theme.copyright.since + ' - ' + currentYear;
     - var copyrightURL = theme.copyright.url || config.url
     - var copyrightName = theme.copyright.name || config.author
-    p &copy; #{copyrightYear} #[a(href=copyrightURL) #{copyrightName}].
-        br
-        | Powered by #[a(href='https://hexo.io/', target='_blank') Hexo] &amp; #[a(href=theme.url, target='_blank') #{theme.name}].
-        br
+    p 
+        a(href=theme.RSS)
+            i(class='fa fa-rss')
         span#busuanzi_container_site_pv
-            | Page View 
+            |  pv 
             span#busuanzi_value_site_pv
                 i(class='fa fa-spinner')
             |  times, 
         span#busanzi_container_site_uv
-            | Unique Visitor 
+            | uv 
             span#busuanzi_value_site_uv
                 i(class='fa fa-spinner')
             |  times.
+        br
+        |  &copy; #{copyrightYear} #[a(href=copyrightURL) #{copyrightName}]. 
+        |  Powered by #[a(href='https://hexo.io/', target='_blank') Hexo] &amp; #[a(href=theme.url, target='_blank') #{theme.name}].
     script(async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js")

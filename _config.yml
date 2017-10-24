@@ -2,11 +2,14 @@ name: ArtemisX
 url: https://github.com/wwwuxt/hexo-theme-artemisX
 
 menu:
-  Home: /
-  Archives: /archives
-  About: /about
+  首页: /
+  归档: /archives
+  标签: /tags
+  关于: /about
+  # 分类: /categories
   # GitHub: https://github.com/wwwuxt
-  # RSS: /atom.xml
+
+RSS: /atom.xml
 
 favicon: /favicon.ico
 logo: /favicon.ico

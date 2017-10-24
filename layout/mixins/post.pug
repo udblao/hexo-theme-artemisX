@@ -26,12 +26,7 @@ mixin posts()
                         != full_date(item.date, config.date_format)
                         | &nbsp;| 
                         i(class='fa fa-folder-o') &nbsp;
-                        if item.categories && item.categories.length
-                            - item.categories.each(function (category) {
-                                a.post-category-link(href=url_for(category.path))
-                                    != category.name
-                                    | &nbsp;/&nbsp;
-                            - })
+                        +categories(item)
                     .post-content
                         != item.excerpt
                     a.read-more(href=url_for(item.path))
@@ -67,13 +62,33 @@ mixin post(item)
                 != full_date(item.date, config.date_format)
                 | &nbsp;| 
                 i(class='fa fa-folder-o') &nbsp;
-                if item.categories && item.categories.length
-                    - item.categories.each(function (category) {
-                        a.post-category-link(href=url_for(category.path))
-                            != category.name
-                            | &nbsp;/&nbsp;
-                    - })
-                else
-                    a.post-category-link(href=url_for(theme.copyright.url)) #{'Full Stand developer'}
+                +categories(item)
             .post-content
                 != item.content
+
+//- Tags Page
+mixin tagList()
+    .tag-list
+        | 11111
+
+
+//- Post categories
+mixin categories(item)
+    if item.categories && item.categories.length
+        - item.categories.each(function (category) {
+            a.post-category-link(href=url_for(category.path))
+                != category.name
+                | &nbsp;/&nbsp;
+        - })
+    else
+        a.post-category-link(href=url_for(theme.copyright.url)) #{'Full Stand developer'}
+
+//- Post tags
+mixin tags_post()
+    - page.post.each(function (item) {
+        li.post-list-item
+            if item.tags && item.tags.length
+                - item.tags.each(function (tag) {
+                    a(href=url_for(tag.path))=tag.name
+                - })
+    - })
