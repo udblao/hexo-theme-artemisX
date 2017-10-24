@@ -1,8 +1,14 @@
 extends partial/layout.pug
 
 block container
+    h1.page_tag
+        != page.tag
     include mixins/post.pug
-    +tagList()
+    +postList()
+
+block pagination
+    include mixins/paginator.pug
+    +home()
 
 block copyright
     include partial/copyright.pug

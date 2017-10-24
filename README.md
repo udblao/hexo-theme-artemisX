@@ -25,6 +25,7 @@ git pull
 - `baidu_autopush`
 - `categories`
 - `busuanzi` pv/uv counting
+- `tags`
 - ......
 
 ## new style

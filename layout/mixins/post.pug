@@ -69,8 +69,11 @@ mixin post(item)
 //- Tags Page
 mixin tagList()
     .tag-list
-        | 11111
-
+        if site.tags && site.tags.length
+        - site.tags.each(function (tag) {
+            a(href=url_for(tag.path))=tag.name
+            br
+        - })
 
 //- Post categories
 mixin categories(item)
@@ -83,12 +86,4 @@ mixin categories(item)
     else
         a.post-category-link(href=url_for(theme.copyright.url)) #{'Full Stand developer'}
 
-//- Post tags
-mixin tags_post()
-    - page.post.each(function (item) {
-        li.post-list-item
-            if item.tags && item.tags.length
-                - item.tags.each(function (tag) {
-                    a(href=url_for(tag.path))=tag.name
-                - })
-    - })
+    
