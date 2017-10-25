@@ -50,3 +50,47 @@ if theme.baidu_autopush
             s.parentNode.insertBefore(bp, s);
             console.log('wwwuxt.cc')
         })();
+
+//- Get Response Header
+if theme.double_deploy
+    script.
+        (function(){
+            var req = GetXmlHttpObject()  
+            if (req == null) {  
+                console.log("not support AJAX!");  
+                return;  
+            }
+            req.onreadystatechange = function() {  
+                if (req.readyState === 4 && req.status === 200) {  
+                    // var responseText = req.responseText;  
+                    // alert(responseText);
+                    // var result = eval('(' + responseText + ')');  
+                    // console.log(responseText)
+                    var deploy_server = req.getResponseHeader("Server");
+                    console.log(deploy_server)
+                    if(deploy_server === 'Coding Pages'){
+                        document.getElementById('host_by').innerHTML+='Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>'
+                    }
+                    else{
+                        document.getElementById('host_by').innerHTML+='Hosted by <a href="https://pages.github.com" style="font-weight: bold">GitHub Pages</a>'
+                    }
+                }  
+            };  
+            req.open('GET', document.location, true);
+            req.send(null);
+        })();
+        function GetXmlHttpObject() {  
+            var xmlHttp = null;  
+            try {  
+                // Firefox, Opera 8.0+, Safari  
+                xmlHttp = new XMLHttpRequest();  
+            } catch (e) {  
+                // Internet Explorer  
+                try {  
+                    xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");  
+                } catch (e) {  
+                    xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");  
+                }  
+            }  
+            return xmlHttp;  
+        }  

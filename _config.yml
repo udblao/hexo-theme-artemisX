@@ -30,3 +30,7 @@ copyright:
   since: 2017
   name: wwwuxt
   url: http://wwwuxt.cc
+
+# github & coding pages deploy, get header to change copyright
+double_deploy: true
+deploy_server: 

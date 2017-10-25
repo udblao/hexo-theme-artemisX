@@ -4,7 +4,7 @@
     - var copyrightYear = ! theme.copyright.since || currentYear == theme.copyright.since ? currentYear : theme.copyright.since + ' - ' + currentYear;
     - var copyrightURL = theme.copyright.url || config.url
     - var copyrightName = theme.copyright.name || config.author
-    p 
+    p#host_by 
         a(href=theme.RSS)
             i(class='fa fa-rss')
         span#busuanzi_container_site_pv
@@ -20,4 +20,6 @@
         br
         |  &copy; #{copyrightYear} #[a(href=copyrightURL) #{copyrightName}]. 
         |  Powered by #[a(href='https://hexo.io/', target='_blank') Hexo] &amp; #[a(href=theme.url, target='_blank') #{theme.name}].
+        br
     script(async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js")
+    

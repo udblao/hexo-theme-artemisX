@@ -26,6 +26,7 @@ git pull
 - `categories`
 - `busuanzi` pv/uv counting
 - `tags`
+- `double_deploy` github & coding pages, add `host by xx` by Server
 - ......
 
 ## new style
@@ -34,7 +35,7 @@ git pull
 - `post-info/post-category-link post-category-name` post categories
 - `.clearfix` add .clearfix for clear float
 - adjust page width
-- change paginator style 
+- new paginator style 
 - add [Font Awesome](http://fontawesome.dashgame.com)
 - ......
 
