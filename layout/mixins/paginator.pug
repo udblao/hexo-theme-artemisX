@@ -10,12 +10,14 @@ mixin home()
                 != __('NEXT >')
 
 mixin post()
-    - var prev = page.prev ? page.prev.path : false;
-    - var next = page.next ? page.next.path : false;
+    - var prev = page.prev ? page.prev : false;
+    - var next = page.next ? page.next : false;
     .paginator
         if prev
-            a.prev(href=url_for(prev))
-                != __('< PREV_POST')
+            a.prev(href=url_for(prev.path))
+                //!= __('< PREV_POST')
+                != '< ' + prev.title
         if next
-            a.next(href=url_for(next))
-                != __('NEXT_POST >')
+            a.next(href=url_for(next.path))
+                //!= __('NEXT_POST >')
+                != next.title + ' >'

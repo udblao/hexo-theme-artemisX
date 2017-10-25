@@ -1,38 +1,49 @@
 .paginator {
-    margin: 4em 0;
+    // margin: 4em 0;
     text-align: center;
-    .prev {
+    a.prev {
         // display: inline-block;
+        // text-align: right;
+        // margin: 0 4px;
+        // padding: 4px 12px;
+        // border-radius: 4px;
+        // border-bottom: 4px solid #3aa37200;
         float: left;
-        margin: 0 4px;
-        padding: 4px 12px;
-        border-radius: 4px;
-        border-bottom: 4px solid #3aa37200;
+        padding-left: 6px;
         font-size: 16px;
         color: rgba(136, 153, 140, 0.76);
         background-color: rgba(0, 0, 0, 0);
+        -webkit-transition: padding .4s;
+        -moz-transition: padding .4s;
+        -o-transition: padding .4s;
+        transition: padding .4s;
         &:hover {
-            color: #fff;
-            background-color: #22bd77;
-            border-right: 4px solid #3aa373;
-            border-bottom: 4px solid #3aa373;
+            color: rgba(8, 1, 1, 0.801);
+            // background-color: #22bd77;
+            padding-left: 0;
         }
     }
-    .next {
-        // display: inline-block;
+    a.next {
+        //display: inline-block;
+        // float: right;
+        // margin: 0 4px;
+        // padding: 4px 12px;
+        // border-radius: 4px;
+        // border-bottom: 4px solid #3aa37200;
+        // text-align: left;
         float: right;
-        margin: 0 4px;
-        padding: 4px 12px;
-        border-radius: 4px;
-        border-bottom: 4px solid #3aa37200;
+        padding-right: 6px;
         font-size: 16px;
         color: rgba(136, 153, 140, 0.76);
-        background-color: rgba(0, 0, 0, 0);
+        // background-color: rgba(0, 0, 0, 0);
+        -webkit-transition: padding .4s;
+        -moz-transition: padding .4s;
+        -o-transition: padding .4s;
+        transition: padding .4s;
         &:hover {
-            color: #fff;
-            background-color: #22bd77;
-            border-left: 4px solid #3aa373;
-            border-bottom: 4px solid #3aa373;
+            color: rgba(8, 1, 1, 0.801);
+            // background-color: #22bd77;
+            padding-right: 0;
         }
     }
 }
