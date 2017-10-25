@@ -1,5 +1,8 @@
 extends partial/layout.pug
 
+block site_title
+    != 'tag-' + page.tag + ' | ' + config.title
+
 block container
     h1.page_tag
         i(class='fa fa-tag') &nbsp;

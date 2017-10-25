@@ -79,7 +79,7 @@ mixin tagList()
         if site.tags && site.tags.length
             - site.tags.each(function (tag) {
                 p.tag-info
-                    a(href=url_for(tag.path))=tag.name
+                    a.post-title-link(href=url_for(tag.path))=tag.name
             - })
 
 //- Post tags
