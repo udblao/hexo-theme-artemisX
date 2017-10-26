@@ -8,7 +8,8 @@
 # Installation
 ## install
 ```
-git clone https://github.com/wwwuxt/hexo-theme-artemisX themes/artemisX
+`GitHub` git clone https://github.com/wwwuxt/hexo-theme-artemisX themes/artemisX 
+`Coding` git clone https://git.coding.net/wwwuxt/hexo-theme-artemisX.git themes/artemisX
 ```
 ## config
 override your parameter in `_config.yml`.
