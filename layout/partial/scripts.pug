@@ -65,13 +65,13 @@ if theme.double_deploy
                     var deploy_server = req.getResponseHeader("Server");
                     console.log(deploy_server)
                     if(deploy_server === 'Coding Pages'){
-                        document.getElementById('host_by').innerHTML+='Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>'
+                        document.getElementById('host_by').innerHTML+='Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a>.'
                     }
                     else if(deploy_server === 'GitHub.com'){
-                        document.getElementById('host_by').innerHTML+='Hosted by <a href="https://pages.github.com" style="font-weight: bold">GitHub Pages</a>'
+                        document.getElementById('host_by').innerHTML+='Hosted by <a href="https://pages.github.com" style="font-weight: bold">GitHub Pages</a>.'
                     }
                     else{
-                        document.getElementById('host_by').innerHTML+='Hosted by <a href="#" style="font-weight: bold">'+ deploy_server + '</a>'
+                        document.getElementById('host_by').innerHTML+='Hosted by <a href="#" style="font-weight: bold">'+ deploy_server + '</a>.'
                     }
                 }  
             };  
