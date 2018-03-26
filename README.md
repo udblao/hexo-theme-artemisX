@@ -1,4 +1,4 @@
-# ArtemisX | [Preview](http://wwwuxt.cc) | [Screenshot](https://github.com/wwwuxt/hexo-theme-artemisX/blob/master/screenshot.png)
+# ArtemisX | [Preview](#) | [Screenshot](https://github.com/wwwuxt/hexo-theme-artemisX/blob/master/screenshot.png)
 
 - Custom development based on [Artemis](https://github.com/Dreyer/hexo-theme-artemis)
 - html render [jade](https://jade-lang.com)
